@@ -1,0 +1,21 @@
+* {
+  direction: rtl;
+}
+
+.sentence {
+  padding: 20px;
+  width: 80%;
+  margin: 100px auto;
+  background-color: skyblue;
+  color: black;
+}
+
+.fd-icon-1858152601 {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+.fd-button-1858152601 {
+  display: none;
+}
