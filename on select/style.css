@@ -1,21 +1,30 @@
-* {
-  direction: rtl;
-}
-
-.sentence {
+.persian-sentence {
   padding: 20px;
   width: 80%;
   margin: 100px auto;
   background-color: skyblue;
   color: black;
+  direction: rtl;
 }
-
-.fd-icon-1858152601 {
-  width: 30px;
-  height: 30px;
-  position: absolute;
+.english-sentence {
+  direction: ltr;
+  padding: 20px;
+  width: 80%;
+  margin: 100px auto;
+  background-color: purple;
+  color: white;
 }
 
 .fd-button-1858152601 {
   display: none;
+  position: absolute;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.fd-icon-1858152601 {
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
 }
