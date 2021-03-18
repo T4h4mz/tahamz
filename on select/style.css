@@ -23,8 +23,17 @@
   outline: none;
   cursor: pointer;
 }
+
 .fd-icon-1858152601 {
   height: 30px;
   width: 30px;
   border-radius: 20px;
+}
+
+#fd-iframe-1858152601 {
+  width: 500;
+  height: 700;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }

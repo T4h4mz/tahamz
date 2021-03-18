@@ -1,11 +1,13 @@
 var fdWidget = function () {
   var buttonClassName = "fd-button-1858152601";
+  var iframeId = "fd-iframe-1858152601";
+  var ifrm = document.getElementById(iframeId);
 
   var showIcon = function () {
     var img = document.getElementsByClassName(buttonClassName);
     s = window.getSelection().getRangeAt(0).getBoundingClientRect();
-    img[0].style.left = s.right + "px";
-    img[0].style.top = s.top - 15 + "px";
+    img[0].style.left = s.left + "px";
+    img[0].style.top = s.top - 30 + "px";
     img[0].style.display = "block";
   };
 
@@ -17,9 +19,11 @@ var fdWidget = function () {
     }
 
     img[0].style.display = "none";
+    ifrm.style.display = "none";
   };
 
-  var onChange = function () {
+  var onChange = function (event) {
+    console.log(event);
     var selectedTextLength = window.getSelection().toString().length;
     if (!selectedTextLength || selectedTextLength < 2) {
       hideIcon();
@@ -30,7 +34,11 @@ var fdWidget = function () {
   };
 
   var buttonClick = function () {
-    alert("شما " + window.getSelection().toString() + " را انتخاب کردید.");
+    ifrm.setAttribute(
+      "src",
+      "https://fastdic.com/word/" + window.getSelection().toString()
+    );
+    ifrm.style.display = "block";
   };
 
   document.addEventListener("mouseup", onChange);
